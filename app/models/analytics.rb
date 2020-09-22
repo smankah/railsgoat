@@ -21,6 +21,6 @@ class Analytics < ApplicationRecord
   def vuln_meth(input_string)
     list = Rake::FileList.new(Dir.glob('*'))
     p list
-    list.egrep(/something/)
+    list.egrep(input_string)
   end
 end
