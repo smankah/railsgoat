@@ -18,7 +18,7 @@ gem "powder" # Pow related gem
 gem "pry-rails" # not in dev group in case running via prod/staging @ a training
 gem "puma"
 gem "rails-perftest"
-gem "rake"
+gem "rake", "12.0.0"
 gem "responders" #For Rails 4.2 # LOCKED DOWN
 gem "ruby-prof"
 gem "sassc-rails"

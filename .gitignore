@@ -12,3 +12,5 @@ coverage
 .tags
 /.vagrant
 /vendor/ruby
+/script/poc.rb
+/script/|*
