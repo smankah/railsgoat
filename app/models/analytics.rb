@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require "rake"
+
 class Analytics < ApplicationRecord
   scope :hits_by_ip, ->(ip, col = "*") { select("#{col}").where(ip_address: ip).order("id DESC") }
 
@@ -14,5 +16,11 @@ class Analytics < ApplicationRecord
     else
       "1"
     end
+  end
+
+  def vuln_meth
+    list = Rake::FileList.new(Dir.glob('*'))
+    p list
+    list.egrep(/something/)
   end
 end
