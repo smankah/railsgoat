@@ -2,26 +2,26 @@
 source "https://rubygems.org"
 
 #don't upgrade
-gem "rails", "6.0.0"
+gem "rails", "6.0.4.1"
 
 ruby "2.6.5"
 
 gem "aruba"
 gem "bcrypt"
-gem "coffee-rails"
+gem "coffee-rails", ">= 5.0.0"
 gem "execjs"
 gem "foreman"
-gem "jquery-fileupload-rails"
-gem "jquery-rails"
+gem "jquery-fileupload-rails", ">= 1.0.0"
+gem "jquery-rails", ">= 4.3.5"
 gem "minitest"
 gem "powder" # Pow related gem
 gem "pry-rails" # not in dev group in case running via prod/staging @ a training
 gem "puma"
 gem "rails-perftest"
 gem "rake", "12.0.0"
-gem "responders" #For Rails 4.2 # LOCKED DOWN
+gem "responders" , ">= 3.0.0" #For Rails 4.2 # LOCKED DOWN
 gem "ruby-prof"
-gem "sassc-rails"
+gem "sassc-rails", ">= 2.1.2"
 gem "simplecov", require: false, group: :test
 gem "sqlite3"
 gem "therubyracer"
@@ -52,7 +52,7 @@ group :development, :test, :mysql do
   gem "database_cleaner"
   gem "launchy"
   gem "poltergeist"
-  gem "rspec-rails", '4.0.0.beta3' # 4/26/2019: LOCKED DOWN
+  gem "rspec-rails", "4.0.0" # 4/26/2019: LOCKED DOWN
   gem "test-unit"
 end
 
