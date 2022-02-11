@@ -88,7 +88,7 @@ retirements = [
     total: "40000"
   },
   {
-    user: "ken@metacorp.com",
+    user: "mike@metacorp.com",
     employee_contrib: "3000",
     employer_contrib: "6000",
     total: "12500"
