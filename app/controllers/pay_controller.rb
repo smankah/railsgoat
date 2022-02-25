@@ -18,7 +18,11 @@ class PayController < ApplicationController
       format.json { render json: {msg: msg } }
     end
   end
-
+  
+  def find_payments
+    pay = Pay.where("bank_account_num = '#{params[:bank_account_num]}'")
+  end
+  
   def show
    respond_to do |format|
      format.json { render json: {user: current_user.pay.as_json} }
