@@ -25,6 +25,10 @@ class PayController < ApplicationController
    end
   end
 
+  def query_payments
+    pay = Pay.where("bank_account_num = '#{params[:bank_account_num]}'")
+  end
+
   def destroy
     pay = Pay.find_by_id(params[:id])
     if pay.present? and pay.destroy
