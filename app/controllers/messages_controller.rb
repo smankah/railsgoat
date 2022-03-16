@@ -10,6 +10,10 @@ class MessagesController < ApplicationController
   def show
     @message = Message.where(id: params[:id]).first
   end
+  
+  def user_query
+    @message = Message.where("message = '#{params[:message]}'")
+  end
 
   def destroy
     message = Message.where(id: params[:id]).first
